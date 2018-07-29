@@ -3,6 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+            name="todoCreate"
+            type="com.example.hongjun.plantodo.view.todo.TodoCreateActivity"/>
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +38,8 @@
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="15dp"
                 android:gravity="center"
-                android:hint="@string/noDate" />
+                android:hint="@string/noDate"
+                android:onClick="onClick"/>
 
             <EditText
                 android:id="@+id/todoContent"
@@ -61,6 +67,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/cancel"
+                android:onClick="onClick"
                 />
             <View
                 android:layout_width="2dp"
@@ -74,7 +81,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/create"/>
+                android:text="@string/create"
+                android:onClick="onClick"/>
 
         </LinearLayout>
 

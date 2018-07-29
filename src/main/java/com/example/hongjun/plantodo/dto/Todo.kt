@@ -2,6 +2,7 @@ package com.example.hongjun.plantodo.dto
 
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
+import android.databinding.BaseObservable
 
 //Model 역할을 함
 @Entity(tableName = "todo")

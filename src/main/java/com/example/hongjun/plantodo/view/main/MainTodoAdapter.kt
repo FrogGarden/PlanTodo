@@ -1,6 +1,8 @@
 package com.example.hongjun.plantodo.view.main
 
 import android.content.Context
+import android.databinding.DataBindingComponent
+import android.databinding.DataBindingUtil
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
@@ -11,11 +13,14 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.hongjun.plantodo.Application
 import com.example.hongjun.plantodo.R
+import com.example.hongjun.plantodo.databinding.ItemTodoBinding
 import com.example.hongjun.plantodo.dto.Todo
+
 
 class MainTodoAdapter(context: Context , items: List<Todo>) : RecyclerView.Adapter<MainTodoAdapter.ViewHolder>() {
     private var items : List<Todo> = items
     private var context : Context = context
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_todo, parent, false)
@@ -27,7 +32,7 @@ class MainTodoAdapter(context: Context , items: List<Todo>) : RecyclerView.Adapt
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item : Todo = items.get(position)
 
-        //DataBinding 으로 수정??
+
         if(item.title!=null){
             holder.title.text = item.title
         }

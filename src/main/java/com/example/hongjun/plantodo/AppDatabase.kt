@@ -9,6 +9,7 @@ import com.example.hongjun.plantodo.dao.TodoDao
 import com.example.hongjun.plantodo.dto.Todo
 import kotlin.reflect.KClass
 
+//database의 holder
 @Database(version = 2, entities = arrayOf(Todo::class))
 abstract class AppDatabase : RoomDatabase(){
 
